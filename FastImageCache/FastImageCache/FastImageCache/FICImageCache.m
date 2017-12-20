@@ -169,7 +169,7 @@ static NSString *const FICImageCacheEntityKey = @"FICImageCacheEntityKey";
     if (loadSynchronously == NO && [imageTable entryExistsForEntityUUID:entityUUID sourceImageUUID:sourceImageUUID]) {
         imageExists = YES;
         
-        dispatch_async([FICImageCache dispatchQueue], ^{
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             UIImage *image = [imageTable newImageForEntityUUID:entityUUID sourceImageUUID:sourceImageUUID preheatData:YES];
             
             if (completionBlock != nil) {
