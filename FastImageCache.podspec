@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "FastImageCache"
-  s.version      = "1.5.2"
+  s.version      = "1.5.3"
   s.summary      = "iOS library for quickly displaying images while scrolling"
 
   s.homepage     = "https://github.com/JayZhao/FastImageCache"
